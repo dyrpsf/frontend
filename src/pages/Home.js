@@ -9,7 +9,7 @@ export default function Home() {
   const [filters, setFilters] = useState({ role: "", skill: "" });
 
   useEffect(() => {
-    axios.get("https://your-backend-url/members")
+    axios.get("http://localhost:4000/members")
       .then(res => {
         setMembers(res.data);
         setFiltered(res.data);
